@@ -1,9 +1,14 @@
 import React from 'react';
+import Routes from './routes/routes';
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 function App() {
   return (
     <div className="App">
-      <h1>API</h1>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     </div>
   );
 }
